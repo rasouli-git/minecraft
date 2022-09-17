@@ -1,0 +1,500 @@
+@font-face {
+  font-family: "vazir";
+  src: url("../fonts/vazir.eot");
+  src: url("../fonts/vazir.ttf") format("truetype"), url("../fonts/vazir.woff2") format("woff2"), url("../fonts/vazir.woff") format("woff");
+}
+@font-face {
+  font-family: "IranYekan";
+  src: url("../fonts/iranyekanwebmedium.2d4f96e5.woff") format("woff");
+}
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+input, button, textarea, label {
+  font-family: "IranYekan";
+}
+
+html {
+  direction: rtl;
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.3rem;
+  font-family: "IranYekan";
+  position: relative;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url(../images/bg.png);
+  background-size: cover;
+}
+
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+}
+
+header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+header .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.1);
+}
+header .header .home {
+  font-size: 1.8rem;
+}
+header .header .home a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+header .header .home a span {
+  display: none;
+}
+header .header .logo img {
+  width: 40px;
+  height: 40px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.register {
+  padding: 1rem 2rem;
+  color: #fff;
+}
+.register .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 2rem;
+}
+.register .logo img {
+  width: 150px;
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.register .sign-div .text-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 2rem;
+}
+.register .sign-div .text-logo img {
+  width: 90%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.register .sign-div form .input-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.register .sign-div form .input-items .item {
+  width: 100%;
+  padding: 1rem 0;
+}
+.register .sign-div form .input-items .item label {
+  width: 100%;
+  display: block;
+  margin-bottom: 5px;
+}
+.register .sign-div form .input-items .item input {
+  padding: 1rem;
+  width: 100%;
+  border-radius: 4px;
+  border: 0;
+  outline: 0;
+  caret-color: rgb(0, 155, 176);
+}
+.register .sign-div form .check-items {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2rem 0;
+}
+.register .sign-div form .check-items .item {
+  display: flex;
+  align-items: center;
+}
+.register .sign-div form .check-items .item label {
+  margin-right: 5px;
+}
+.register .sign-div form .text-area {
+  padding: 1rem;
+  width: 100%;
+  height: 100px;
+  margin: 1rem 0;
+  border-radius: 4px;
+  border: 0;
+  outline: 0;
+  caret-color: rgb(0, 155, 176);
+}
+.register .sign-div form .policy {
+  margin: 2rem 0;
+}
+.register .sign-div form .policy label {
+  margin-right: 5px;
+}
+.register .sign-div form .policy label a {
+  color: aqua;
+}
+.register .sign-div form .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+}
+.register .sign-div form .btn button {
+  padding: 1rem 3rem;
+  outline: 0;
+  border: 0;
+  color: #444;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  background-color: rgb(255, 255, 255);
+}
+.register .sign-div form .btn button:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.mess-div {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  z-index: 10;
+  padding: 3rem;
+  transform: translateY(100%);
+  transition: transform 0.5s ease;
+}
+.mess-div.active {
+  transform: translateY(0);
+}
+.mess-div .close-code {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+.mess-div .code {
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.mess-div .code input {
+  padding: 1rem;
+  width: 80%;
+  max-width: 500px;
+  text-align: center;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  margin-bottom: 4rem;
+  box-shadow: 0 2px 3px 2px #eee;
+}
+.mess-div .code .btn-code {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.mess-div .code .btn-code button {
+  width: 50%;
+  max-width: 200px;
+  padding: 1rem 2rem;
+  background-color: #444;
+  color: #eee;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+@media screen and (min-width: 568px) {
+  .register .sign-div form .input-items {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .register .sign-div form .input-items .item {
+    width: 49%;
+  }
+  .register .sign-div form .check-items {
+    justify-content: flex-start;
+  }
+  .register .sign-div form .check-items .item {
+    margin-left: 2rem;
+  }
+  .register .sign-div form .text-area {
+    height: 150px;
+  }
+  .register .sign-div form .btn {
+    padding: 3rem 0;
+  }
+  .register .sign-div form .btn button {
+    padding: 1.2rem 4rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  header {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  header .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+  header .header:hover {
+    background: rgba(255, 255, 255, 0.6);
+  }
+  header .header:hover .home svg {
+    transform: rotate(360deg);
+    color: gold;
+  }
+  header .header .home a {
+    color: #fff;
+  }
+  header .header .home a svg {
+    font-size: 1.8rem;
+    transition: all 0.3s ease;
+  }
+  header .header .home a span {
+    display: unset;
+    font-size: 1.2rem;
+  }
+  header .header .logo {
+    display: none;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .register {
+    margin: 2rem 0;
+  }
+  .register .sign-div {
+    padding: 2rem 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+  }
+  .register .sign-div form .input-items .item label {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+  }
+  .register .sign-div form .input-items .item input {
+    padding: 1.3rem;
+  }
+  .register .sign-div form .text-area {
+    height: 200px;
+    resize: none;
+  }
+  .register .sign-div form .policy {
+    font-size: 1.6rem;
+  }
+  .register .sign-div form .btn {
+    padding: 0;
+  }
+}
+main .container .home a {
+  display: flex;
+  padding-bottom: 1rem;
+  align-items: center;
+  color: #fff;
+}
+main .container .home a svg {
+  font-size: 2rem;
+}
+main .container .home a span {
+  display: none;
+}
+main .container .coins .text-logo {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.3);
+}
+main .container .coins .text-logo a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+main .container .coins .text-logo a img {
+  width: 90%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .container .coins__items {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 0;
+}
+main .container .coins__items .row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+main .container .coins__items .row.x {
+  width: 100%;
+}
+main .container .coins__items .row.x .item {
+  flex-basis: 100%;
+}
+main .container .coins__items .row.x .item .price {
+  position: absolute;
+  font-size: 1.6rem;
+  font-weight: bold;
+  top: 0;
+  right: 10px;
+  z-index: 4;
+  color: gold;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+}
+main .container .coins__items .row.x .item .price span:nth-child(2) {
+  font-size: 0.7rem;
+}
+main .container .coins__items .row .item {
+  flex-basis: 250px;
+  flex-grow: 1;
+  margin: 5px;
+  position: relative;
+}
+main .container .coins__items .row .item img {
+  width: 100%;
+  height: 100%;
+}
+main .container .coins__items .row .item .arrow {
+  position: absolute;
+  top: 28px;
+  right: 10px;
+}
+main .container .coins__items .row .item .arrow img {
+  width: 80px;
+  height: 20px;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+main .container .coins__items .row .item .price {
+  position: absolute;
+  font-size: 2.3rem;
+  font-weight: bold;
+  top: 40px;
+  right: 7px;
+  z-index: 2;
+  color: gold;
+}
+
+@media screen and (min-width: 1024px) {
+  main .container {
+    padding: 4rem 0;
+  }
+  main .container .home a {
+    flex-direction: column;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.3);
+    padding: 1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+  main .container .home a:hover {
+    background: rgba(255, 255, 255, 0.4);
+  }
+  main .container .home a:hover svg {
+    transform: rotate(360deg);
+    color: gold;
+  }
+  main .container .home a svg {
+    transition: transform 0.5s ease;
+  }
+  main .container .home a span {
+    display: unset;
+  }
+  main .container .coins {
+    padding: 2rem 6rem;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+  }
+  main .container .coins .text-logo {
+    background: unset;
+    margin-top: unset;
+    padding: unset;
+    padding-bottom: 1rem;
+  }
+  main .container .coins .text-logo a img {
+    width: 70%;
+  }
+  main .container .coins__items {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 0;
+  }
+  main .container .coins__items .row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  main .container .coins__items .row.x {
+    width: 100%;
+  }
+  main .container .coins__items .row.x .item {
+    flex-basis: 100%;
+  }
+  main .container .coins__items .row.x .item img {
+    width: 100%;
+    height: 200px;
+    -o-object-fit: fill;
+       object-fit: fill;
+  }
+  main .container .coins__items .row.x .item .price {
+    font-size: 3rem;
+    top: 5px;
+    right: 100px;
+  }
+  main .container .coins__items .row.x .item .price span:nth-child(2) {
+    font-size: 1.5rem;
+  }
+  main .container .coins__items .row .item {
+    transition: transform 0.3s ease;
+  }
+  main .container .coins__items .row .item:hover {
+    transform: scale(0.99);
+  }
+}/*# sourceMappingURL=main.css.map */

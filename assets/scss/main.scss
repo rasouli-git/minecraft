@@ -1,0 +1,214 @@
+@import "base";
+@import "register";
+
+main {
+  
+
+  .container {
+
+    .home {
+      a {
+        display: flex;
+        padding-bottom: 1rem;
+        align-items: center;
+        color: #fff;
+
+        svg {
+          font-size: 2rem;
+        }
+        span {
+          display: none;
+        }
+      }
+    }
+
+    .coins {
+      .text-logo {
+        margin-top: 1rem;
+        padding: 1rem;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.3);
+
+        a {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          img {
+            width: 90%;
+            object-fit: cover;
+          }
+        }
+      }
+
+      &__items {
+        display: flex;
+        flex-direction: column;
+        padding: 2rem 0;
+
+        .row {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          flex-wrap: wrap;
+
+          &.x {
+            width: 100%;
+            .item {
+              flex-basis: 100%;
+
+              .price {
+                position: absolute;
+                font-size: 1.6rem;
+                font-weight: bold;
+                top: 0;
+                right: 10px;
+                z-index: 4;
+                color: gold;
+                border-radius: 8px;
+                display: flex;
+                align-items: center;
+
+                span:nth-child(2) {
+                  font-size: 0.7rem;
+                }
+              }
+            }
+          }
+
+          .item {
+            flex-basis: 250px;
+            flex-grow: 1;
+            margin: 5px;
+            position: relative;
+            img {
+              width: 100%;
+              height: 100%;
+            }
+            .arrow {
+              position: absolute;
+              top: 28px;
+              right: 10px;
+
+              img {
+                width: 80px;
+                height: 20px;
+                object-fit: fill;
+              }
+            }
+            .price {
+              position: absolute;
+              font-size: 2.3rem;
+              font-weight: bold;
+              top: 40px;
+              right: 7px;
+              z-index: 2;
+              color: gold;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (min-width: 1024px) {
+  main {
+
+    .container {
+      padding: 4rem 0;
+
+      .home {
+        a {
+          flex-direction: column;
+          position: fixed;
+          top: 20px;
+          right: 20px;
+          background: rgba(255, 255, 255, 0.3);
+          padding: 1rem;
+          border-radius: 8px;
+          transition: all 0.3s ease;
+
+          &:hover {
+            background: rgba(255, 255, 255, 0.4);
+
+            svg {
+              transform: rotate(360deg);
+              color: gold;
+            }
+          }
+          svg {
+            transition: transform 0.5s ease;
+          }
+
+          span {
+            display: unset;
+          }
+        }
+      }
+
+      .coins {
+        padding: 2rem 6rem;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.1);
+        .text-logo {
+          background: unset;
+          margin-top: unset;
+          padding: unset;
+          padding-bottom: 1rem;
+
+          a {
+            img {
+              width: 70%;
+            }
+          }
+        }
+
+        &__items {
+          display: flex;
+          flex-direction: column;
+          padding: 2rem 0;
+
+          .row {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            &.x {
+              width: 100%;
+              .item {
+                flex-basis: 100%;
+
+                img {
+                  width: 100%;
+                  height: 200px;
+                  object-fit: fill;
+                }
+                .price {
+                  font-size: 3rem;
+                  top: 5px;
+                  right: 100px;
+
+                  span:nth-child(2) {
+                    font-size: 1.5rem;
+                  }
+                }
+              }
+            }
+
+            .item {
+              transition: transform 0.3s ease;
+              &:hover {
+                transform: scale(0.99);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
