@@ -118,8 +118,14 @@ header .header .logo img {
 .register .sign-div form .input-items .item.error span {
   visibility: visible;
 }
+.register .sign-div form .input-items .item.error input {
+  border: 1px solid #c00;
+}
 .register .sign-div form .input-items .item.error svg.fa-exclamation-triangle {
   visibility: visible;
+}
+.register .sign-div form .input-items .item.success input {
+  border: 2px solid #43cc5a;
 }
 .register .sign-div form .input-items .item.success svg.fa-check-circle {
   visibility: visible;
@@ -209,10 +215,11 @@ header .header .logo img {
   align-items: center;
   justify-content: center;
   border-radius: 4px;
-  background-color: rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
 }
 .register .sign-div form .btn button:hover {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgb(255, 255, 255);
 }
 
 .mess-div {

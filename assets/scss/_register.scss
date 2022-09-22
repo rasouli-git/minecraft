@@ -76,6 +76,9 @@ header {
             span {
               visibility: visible;
             }
+            input{
+              border: 1px solid #c00;
+            }
             svg {
               &.fa-exclamation-triangle {
                 visibility: visible;
@@ -83,6 +86,9 @@ header {
             }
           }
           &.success {
+            input{
+              border: 2px solid #43cc5a;
+            }
 
             svg{
               &.fa-check-circle {
@@ -184,10 +190,11 @@ header {
           align-items: center;
           justify-content: center;
           border-radius: 4px;
-          background-color: rgba(255, 255, 255, 1);
+          background-color: rgba(255, 255, 255, .5);
+          cursor: pointer;
 
           &:hover {
-            background-color: rgba(255, 255, 255, 0.8);
+            background-color: rgba(255, 255, 255, 1);
           }
         }
       }
