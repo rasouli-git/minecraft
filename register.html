@@ -44,22 +44,37 @@
             <div class="item">
               <label for="username">نام کاربری</label>
               <input type="text" id="username" />
+              <i class="fas fa-check-circle"></i>
+              <i class="fas fa-exclamation-triangle"></i>
+              <span>پیام خطا</span>
             </div>
             <div class="item">
-              <label for="">کلمه عبور</label>
-              <input type="text" />
+              <label for="password">کلمه عبور</label>
+              <input type="text" id="password"/>
+              <i class="fas fa-check-circle"></i>
+              <i class="fas fa-exclamation-triangle"></i>
+              <span>پیام خطا</span>
             </div>
             <div class="item">
-              <label for="">نام کامل</label>
-              <input type="text" />
+              <label for="fullName">نام کامل</label>
+              <input type="text" id="fullName"/>
+              <i class="fas fa-check-circle"></i>
+              <i class="fas fa-exclamation-triangle"></i>
+              <span>پیام خطا</span>
             </div>
             <div class="item">
-              <label for="">شماره همراه</label>
-              <input type="text" />
+              <label for="phone">شماره همراه</label>
+              <input type="tel" id="phone" maxlength="11"/>
+              <i class="fas fa-check-circle"></i>
+              <i class="fas fa-exclamation-triangle"></i>
+              <span>پیام خطا</span>
             </div>
             <div class="item">
-              <label for="">ایمیل</label>
-              <input type="text" />
+              <label for="email">ایمیل</label>
+              <input type="text" id="email"/>
+              <i class="fas fa-check-circle"></i>
+              <i class="fas fa-exclamation-triangle"></i>
+              <span>پیام خطا</span>
             </div>
             <div class="item">
               <label for="">ای دی معرف</label>
@@ -76,7 +91,11 @@
               <label for="else">برای دیگران</label>
             </div>
           </div>
-          <textarea class="text-area" maxlength="400" placeholder="توضیحات : "></textarea>
+          <textarea
+            class="text-area"
+            maxlength="400"
+            placeholder="توضیحات : "
+          ></textarea>
           <div class="policy">
             <input type="checkbox" id="policy" />
             <label for="policy"
@@ -96,13 +115,11 @@
       </div>
 
       <div class="code">
-        <input type="text" placeholder="کد را وارد نمایید">
+        <input type="text" placeholder="کد را وارد نمایید" />
         <div class="btn-code">
           <button>تایید</button>
         </div>
       </div>
-      
-
     </div>
 
     <script src="./assets/js/all.min.js"></script>

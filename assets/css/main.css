@@ -113,6 +113,16 @@ header .header .logo img {
 .register .sign-div form .input-items .item {
   width: 100%;
   padding: 1rem 0;
+  position: relative;
+}
+.register .sign-div form .input-items .item.error span {
+  visibility: visible;
+}
+.register .sign-div form .input-items .item.error svg.fa-exclamation-triangle {
+  visibility: visible;
+}
+.register .sign-div form .input-items .item.success svg.fa-check-circle {
+  visibility: visible;
 }
 .register .sign-div form .input-items .item label {
   width: 100%;
@@ -126,6 +136,30 @@ header .header .logo img {
   border: 0;
   outline: 0;
   caret-color: rgb(0, 155, 176);
+}
+.register .sign-div form .input-items .item svg {
+  position: absolute;
+  bottom: 35%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: #444;
+  visibility: hidden;
+  font-size: 1.7rem;
+}
+.register .sign-div form .input-items .item svg.fa-check-circle {
+  color: #43cc5a;
+}
+.register .sign-div form .input-items .item svg.fa-exclamation-triangle {
+  color: #c00;
+}
+.register .sign-div form .input-items .item span {
+  font-size: 13px;
+  color: rgb(255, 33, 33);
+  visibility: hidden;
+  margin-top: 0.5rem;
+  display: block;
+  font-size: 1.3rem;
+  padding-right: 1rem;
 }
 .register .sign-div form .check-items {
   display: flex;

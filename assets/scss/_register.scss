@@ -70,6 +70,26 @@ header {
         .item {
           width: 100%;
           padding: 1rem 0;
+          position: relative;
+
+          &.error {
+            span {
+              visibility: visible;
+            }
+            svg {
+              &.fa-exclamation-triangle {
+                visibility: visible;
+              }
+            }
+          }
+          &.success {
+
+            svg{
+              &.fa-check-circle {
+                visibility: visible;
+              }
+            }
+          }
 
           label {
             width: 100%;
@@ -83,6 +103,31 @@ header {
             border: 0;
             outline: 0;
             caret-color: rgb(0, 155, 176);
+          }
+          svg {
+            position: absolute;
+            bottom: 35%;
+            left: 10px;
+            transform: translateY(-50%);
+            color: #444;
+            visibility: hidden;
+            font-size: 1.7rem;
+
+            &.fa-check-circle {
+              color: #43cc5a;
+            }
+            &.fa-exclamation-triangle {
+              color: #c00;
+            }
+          }
+          span {
+            font-size: 13px;
+            color: rgb(255, 33, 33);
+            visibility: hidden;
+            margin-top: .5rem;
+            display: block;
+            font-size: 1.3rem;
+            padding-right: 1rem;
           }
         }
       }
@@ -115,8 +160,6 @@ header {
       .policy {
         margin: 2rem 0;
 
-        input {
-        }
         label {
           margin-right: 5px;
 
@@ -162,7 +205,7 @@ header {
   z-index: 10;
   padding: 3rem;
   transform: translateY(100%);
-  transition: transform .5s ease;
+  transition: transform 0.5s ease;
 
   &.active {
     transform: translateY(0);
