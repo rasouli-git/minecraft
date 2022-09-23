@@ -215,11 +215,11 @@ header .header .logo img {
   align-items: center;
   justify-content: center;
   border-radius: 4px;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgb(255, 255, 255);
   cursor: pointer;
 }
 .register .sign-div form .btn button:hover {
-  background-color: rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 .mess-div {

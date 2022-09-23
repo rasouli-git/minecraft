@@ -2,28 +2,12 @@ const btn = document.querySelector(".btn");
 const messDiv = document.querySelector(".mess-div");
 const closeMess = document.querySelector(".close-code");
 const items = document.querySelectorAll(".item");
-const codeInput = document.querySelector('.code-input')
-
-
-closeMess.addEventListener("click", () => {
-  messDiv.classList.remove("active");
-});
+const codeInput = document.querySelector(".code-input");
 
 const forMe = document.querySelector("#for-me");
 const other = document.querySelector("#else");
 
-forMe.addEventListener("click", () => {
-  if (forMe.checked == true) {
-    other.checked = false;
-    forMe.checked = true;
-  }
-});
-other.addEventListener("click", () => {
-  if (other.checked == true) {
-    forMe.checked = false;
-    other.checked = true;
-  }
-});
+const policy = document.querySelector("#policy");
 
 const form = document.querySelector("form");
 const username = document.querySelector("#username");
@@ -79,12 +63,10 @@ function checkInput() {
     setSuccess(email);
   }
 
-  
-
   items.forEach((item) => {
     if (item.classList.contains("success")) {
       index++;
-      if (index===5) {
+      if ((policy.checked === true && index === 5)) {
         messDiv.classList.add("active");
         codeInput.focus();
       }
@@ -115,3 +97,20 @@ const patternEmail =
 function isEmail(email) {
   return patternEmail.test(email);
 }
+
+forMe.addEventListener("click", () => {
+  if (forMe.checked == true) {
+    other.checked = false;
+    forMe.checked = true;
+  }
+});
+other.addEventListener("click", () => {
+  if (other.checked == true) {
+    forMe.checked = false;
+    other.checked = true;
+  }
+});
+
+closeMess.addEventListener("click", () => {
+  messDiv.classList.remove("active");
+});
